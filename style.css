@@ -1,0 +1,237 @@
+/* ================= RESET ================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+
+/* ================= HEADER GRID LAYOUT ================= */
+.amazon-header {
+  background: #263b31;
+  color: white;
+
+  display: grid;
+
+  /* Proportional layout (no fixed widths) */
+  grid-template-columns:
+    auto     /* logo */
+    auto     /* delivery */
+    9fr      /* search (main space) */
+    1fr      /* language */
+    1fr      /* account */
+    1fr      /* orders */
+    auto;    /* cart */
+
+  align-items: center;
+
+  /* Logo touches the left edge, cart has right spacing */
+  padding: 2px 16px 2px 0;
+
+  /* Balanced spacing between sections */
+  gap: 16px;
+}
+
+
+/* ================= AMAZON HOVER BORDER EFFECT ================= */
+.hover-box {
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border 0.15s ease-in-out;
+}
+
+.hover-box:hover {
+  border: 1px solid white;
+}
+
+
+/* ================= LOGO ================= */
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.amazon-logo {
+  height: 50px;
+  display: block;
+}
+
+
+/* ================= DELIVERY ================= */
+.header-delivery {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.address-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.delivery-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+
+/* ================= SEARCH BAR ================= */
+.header-search {
+  display: flex;
+  width: 100%;
+  height: 38px;
+  border-radius: 6px;
+  overflow: hidden;              /* ✅ makes it one smooth pill */
+  background: white;
+}
+
+/* LEFT: All dropdown */
+.header-search select {
+  width: 70px;
+  border: none;
+  background: #f3f3f3;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* MIDDLE: Input */
+.header-search input {
+  flex: 1;
+  border: none;
+  padding: 0 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+/* RIGHT: Search button */
+.search-btn {
+  width: 50px;
+  border: none;
+  background: #b2075f;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Search icon inside button */
+.search-icon {
+  width: 16px;
+  height: 16px;
+}
+
+
+
+/* ================= LANGUAGE ================= */
+.header-lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.lang-flag {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* ================= LANGUAGE DROPDOWN ================= */
+.header-lang-wrapper {
+  position: relative;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 260px;
+  background: white;
+  color: #111;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+  padding: 12px;
+  font-size: 14px;
+  z-index: 999;
+  display: none;
+}
+
+.header-lang-wrapper:hover .lang-dropdown {
+  display: block;
+}
+
+.lang-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.lang-option input {
+  accent-color: #ff9900;
+}
+
+.lang-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+.lang-currency,
+.lang-footer {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.blue-link {
+  color: #0066c0;
+  cursor: pointer;
+}
+
+/* ================= ACCOUNT & ORDERS ================= */
+.header-account,
+.header-orders {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+
+/* ================= CART ================= */
+.header-cart {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+
+/* ================= SMALL TEXT ================= */
+.small-text {
+  font-size: 12px;
+  color: #e6e6e6;
+}
+
+
+/* ================= IFRAME (if used) ================= */
+.header-frame {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
