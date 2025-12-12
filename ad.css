@@ -1,0 +1,159 @@
+/* =============== RESET =============== */
+*{ box-sizing: border-box; }
+
+html, body{
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: Arial, sans-serif;
+
+  /* IMPORTANT: prevent iframe scrollbars */
+  overflow: hidden;
+}
+
+/* ===== TOTAL HEIGHT MUST BE 65px =====
+   ad-bar = 45px
+   sponsored-row = 20px
+   45 + 20 = 65
+*/
+
+/* =============== TOP BAR (45px) =============== */
+.ad-bar{
+  height: 45px;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6; /* line between bar and sponsored */
+}
+
+/* 8-grid container */
+.ad-inner{
+  height: 45px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 16px;               /* equal left/right space */
+
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr)); /* 8 equal grids */
+  align-items: stretch;
+}
+
+/* col1 empty, col2-3 text */
+.ad-text{
+  grid-column: 2 / span 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  text-align: center;
+
+  /* prevent pushing layout wider */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* col4 empty */
+/* col5-7 thumbs + right */
+.ad-right-zone{
+  grid-column: 5 / span 3;
+
+  display: flex;
+  align-items: center;   /* IMPORTANT: centered inside 45px */
+  gap: 14px;
+  min-width: 0;
+}
+
+/* thumbs fill the bar height (45px) */
+.ad-thumbs{
+  height: 45px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.ad-thumbs img{
+  height: 45px;          /* EXACT bar height */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* brand + link */
+.ad-right{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.ad-brand{
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.ad-brand-name{
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #111;
+}
+
+.ad-brand-sub{
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: -5px;
+  color: #111;
+}
+
+.ad-link{
+  color: #007185;
+  text-decoration: none;
+  font-size: 14px;
+
+  /* prevent overflow */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 220px;
+}
+
+.ad-link:hover{
+  text-decoration: underline;
+}
+
+/* =============== SPONSORED ROW (20px) =============== */
+.ad-sponsored-row{
+  height: 20px;
+  background: #fff;
+}
+
+.ad-sponsored-inner{
+  height: 20px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.ad-sponsored{
+  font-size: 12px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .ad-text{ display: none; }
+  .ad-right-zone{ grid-column: 3 / span 6; }
+}

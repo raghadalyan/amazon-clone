@@ -1,0 +1,398 @@
+/* ====== Base ====== */
+*{ box-sizing: border-box; }
+
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#fff;
+  color:#0f1111;
+}
+
+/* ====== Breadcrumb ====== */
+.breadcrumb{
+  font-size:12px;
+  color:#565959;
+  padding:12px 18px;
+}
+
+/* ====== 4 sections grid ====== */
+.product-grid{
+  display:grid;
+  grid-template-columns: 70px 460px 1fr 320px; /* thumbs | media | details | buybox */
+  gap:18px;
+  padding:0 18px 40px;
+  align-items:start;
+}
+
+/* ====== 1) thumbs ====== */
+.thumbs{
+  padding-top:6px;
+}
+
+.thumbs img{
+  width:50px;
+  height:50px;
+  display:block;
+  object-fit:cover;
+  border:1px solid #d5d9d9;
+  border-radius:8px;
+  margin-bottom:10px;
+  cursor:pointer;
+}
+
+.thumbs img:hover{
+  outline:2px solid #f08804;
+  outline-offset:2px;
+}
+
+/* ====== 2) main media (sticky) ====== */
+.media{
+  position:relative;
+}
+
+.media-sticky{
+  position: sticky;
+  top: 12px;              /* stays visible while scrolling */
+}
+
+.media-sticky img{
+  width:100%;
+  max-width:420px;
+  display:block;
+  border:1px solid #eee;
+  border-radius:6px;
+}
+
+.media-link{
+  margin-top:8px;
+  font-size:12px;
+  color:#007185;
+}
+
+/* ====== 3) details ====== */
+.title{
+  margin:0 0 6px;
+  font-size:20px;
+  font-weight:600;
+  line-height:1.25;
+}
+
+.store{
+  display:inline-block;
+  font-size:13px;
+  color:#007185;
+  text-decoration:none;
+  margin-bottom:10px;
+}
+
+.store:hover{ color:#c7511f; text-decoration:underline; }
+
+.rating-row{
+  font-size:13px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-bottom:6px;
+}
+
+.stars{ font-weight:700; }
+
+.reviews{
+  color:#007185;
+  text-decoration:none;
+}
+.reviews:hover{ color:#c7511f; text-decoration:underline; }
+
+.bought{
+  font-size:13px;
+  color:#565959;
+  margin-bottom:10px;
+}
+
+.price-line{
+  margin:10px 0;
+}
+
+.price{
+  font-size:22px;
+  font-weight:700;
+  margin-right:8px;
+}
+
+.per{
+  font-size:12px;
+  color:#565959;
+}
+
+.links a{
+  font-size:12px;
+  color:#007185;
+  text-decoration:none;
+}
+.links a:hover{ color:#c7511f; text-decoration:underline; }
+
+.var{
+  margin-top:14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.label{
+  font-size:13px;
+  font-weight:700;
+}
+
+.pill{
+  padding:6px 10px;
+  font-size:12px;
+  border:1px solid #d5d9d9;
+  background:#fff;
+  border-radius:999px;
+  cursor:pointer;
+}
+
+.pill.active{
+  border-color:#f08804;
+  box-shadow: 0 0 0 2px rgba(240,136,4,0.25);
+}
+
+.mini-box{
+  margin-top:12px;
+  padding:12px;
+  border:1px solid #d5d9d9;
+  border-radius:10px;
+  background:#fff;
+  max-width:340px;
+}
+
+.mini-price{
+  margin-top:6px;
+  font-weight:700;
+}
+
+.mini-per{
+  font-size:12px;
+  color:#565959;
+  margin-top:4px;
+}
+
+.mini-link{
+  display:inline-block;
+  margin-top:8px;
+  font-size:12px;
+  color:#007185;
+  text-decoration:none;
+}
+.mini-link:hover{ color:#c7511f; text-decoration:underline; }
+
+.specs{
+  margin-top:14px;
+  border-collapse: collapse;
+  font-size:13px;
+}
+
+.specs td{
+  padding:6px 10px 6px 0;
+  vertical-align:top;
+}
+
+.specs td:first-child{
+  color:#565959;
+  width:120px;
+}
+
+.details h3{
+  margin:16px 0 8px;
+  font-size:16px;
+}
+
+.about{
+  margin:0 0 14px 18px;
+  padding:0;
+  font-size:13px;
+  line-height:1.35;
+}
+
+.note{
+  border:1px solid #d5d9d9;
+  border-radius:10px;
+  padding:12px;
+  background:#f7fafa;
+  font-size:13px;
+  margin:12px 0;
+}
+
+.report{
+  display:inline-block;
+  font-size:12px;
+  color:#007185;
+  text-decoration:none;
+  margin-bottom:14px;
+}
+.report:hover{ color:#c7511f; text-decoration:underline; }
+
+.newer{
+  border-top:1px solid #e7e7e7;
+  padding-top:14px;
+}
+
+.newer-title{
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.newer-item a{
+  color:#007185;
+  text-decoration:none;
+  font-size:13px;
+}
+.newer-item a:hover{ color:#c7511f; text-decoration:underline; }
+
+.newer-price{
+  margin-top:6px;
+  font-size:13px;
+}
+
+.newer-sub{
+  margin-top:4px;
+  font-size:12px;
+  color:#565959;
+}
+
+.sponsored{
+  margin-top:6px;
+  font-size:11px;
+  color:#565959;
+}
+
+/* ====== 4) buy box ====== */
+.buybox{
+  border:1px solid #d5d9d9;
+  border-radius:10px;
+  padding:14px;
+  background:#fff;
+}
+
+.buy-price .big{
+  font-size:18px;
+  font-weight:700;
+}
+
+.buy-price .small{
+  font-size:12px;
+  color:#565959;
+}
+
+.ship{
+  margin:10px 0;
+}
+.ship a{
+  font-size:12px;
+  color:#007185;
+  text-decoration:none;
+}
+.ship a:hover{ color:#c7511f; text-decoration:underline; }
+
+.delivery{
+  font-size:12px;
+  color:#0f1111;
+  line-height:1.35;
+  margin:10px 0;
+}
+
+.delivery a{
+  color:#007185;
+  text-decoration:none;
+}
+.delivery a:hover{ color:#c7511f; text-decoration:underline; }
+
+.stock{
+  color:#007600;
+  font-weight:700;
+  margin:10px 0;
+}
+
+.qty{
+  font-size:13px;
+  margin:10px 0;
+}
+
+.qty select{
+  margin-left:6px;
+  padding:4px 6px;
+  border:1px solid #d5d9d9;
+  border-radius:8px;
+}
+
+.btn{
+  width:100%;
+  border:0;
+  padding:10px 12px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:14px;
+  margin-top:10px;
+}
+
+.btn.cart{ background:#ffd814; }
+.btn.buy { background:#ffa41c; }
+.btn.list{
+  background:#fff;
+  border:1px solid #d5d9d9;
+}
+
+.btn:hover{
+  filter: brightness(0.97);
+}
+
+.meta{
+  margin-top:12px;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.meta div{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.meta span{
+  color:#565959;
+}
+
+.gift{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-top:10px;
+  font-size:12px;
+}
+
+.other{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid #e7e7e7;
+  font-size:12px;
+}
+
+.other-title{
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+/* ====== Responsive (optional) ====== */
+@media (max-width: 1200px){
+  .product-grid{
+    grid-template-columns: 70px 380px 1fr 300px;
+  }
+}
+
+@media (max-width: 980px){
+  .product-grid{
+    grid-template-columns: 70px 1fr;   /* stack simpler */
+  }
+  .buybox{ grid-column: 1 / -1; }
+  .media{ grid-column: 2 / -1; }
+}
