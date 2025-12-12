@@ -1,0 +1,126 @@
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: transparent;
+}
+
+/* icon column */
+.share-col{
+  position: relative;
+  width: 26px;
+  height: 26px;
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* share button */
+.share-btn{
+  position: relative;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.share-icon{
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* tooltip */
+.share-tooltip{
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+.share-btn:hover .share-tooltip{ opacity: 1; }
+
+/* dropdown menu */
+.share-menu{
+  position: absolute;
+  top: 0;              /* starts at icon level */
+  left: 26px;          /* opens to the right */
+  width: 210px;
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  overflow: hidden;
+  display: none;
+  z-index: 999999;
+}
+
+.share-col.open .share-menu{ display: block; }
+
+/* each row */
+.share-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: #fff;
+  border: 0;
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.share-row + .share-row{
+  border-top: 1px solid #ededed;
+}
+
+.share-row:hover{
+  background: #f6f6f6;
+}
+
+/* left side */
+.share-left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.share-text{
+  font-size: 14px;
+  color: #111;
+}
+
+/* app icons from img folder */
+.share-app-ico{
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+}
+
+/* close button like amazon */
+.share-close{
+  width: 28px;
+  height: 28px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+.share-close:hover{ background: #f6f6f6; }

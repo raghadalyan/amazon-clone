@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <title>Product Content</title>
   <link rel="stylesheet" href="content.css" />
-  
 </head>
-<script src="script.js"></script>
 
 <body>
 
@@ -15,29 +13,37 @@
     Beauty &amp; Personal Care › Makeup › Face › Blush
   </div>
 
-  <!-- 4 sections layout -->
+  <!-- 5 sections layout -->
   <main class="product-grid">
 
     <!-- 1) LEFT: 7 thumbs -->
-    <aside class="thumbs">
-      <img src="img/t1.png" alt="">
-      <img src="img/t2.png" alt="">
-      <img src="img/t3.png" alt="">
-      <img src="img/t4.png" alt="">
-      <img src="img/t5.png" alt="">
-      <img src="img/t6.png" alt="">
-      <img src="img/t7.png" alt="">
-    </aside>
+ <aside class="thumbs">
+  <img src="../img/t1.png" alt="">
+  <img src="../img/t2.png" alt="">
+  <img src="../img/t3.png" alt="">
+  <img src="../img/t4.png" alt="">
+  <img src="../img/t5.png" alt="">
+  <img src="../img/t6.png" alt="">
+  <img src="../img/t7.png" alt="">
+</aside>
 
-    <!-- 2) MAIN IMAGE (sticky / can scroll while image stays) -->
-    <section class="media">
-      <div class="media-sticky">
-<img id="mainImg" src="img/t1.png" alt="Main product">
-        <div class="media-link">Click to see full view</div>
-      </div>
-    </section>
+    <!-- 2) MAIN IMAGE (sticky) -->
+<section class="media">
+  <div class="media-sticky">
+    <img id="mainImg" src="../img/t1.png" alt="Main product">
+    <div class="media-link">Click to see full view</div>
+  </div>
+</section>
 
-    <!-- 3) DETAILS TEXT -->
+    <!-- 3) SHARE (loaded from share.html) -->
+    <iframe
+      class="share-frame"
+      src="share.html"
+      title="Share"
+      scrolling="no"
+    ></iframe>
+
+    <!-- 4) DETAILS TEXT -->
     <section class="details">
 
       <h1 class="title">
@@ -54,31 +60,46 @@
 
       <div class="bought">10K+ bought in past month</div>
 
-      <div class="price-line">
-        <span class="price">ILS 22.70</span>
-        <span class="per">ILS 126.10 per fluid ounce (ILS126.10 / fluid ounce)</span>
+      <hr class="line">
+
+      <div class="price-line2">
+        <span class="ils">ILS</span><span class="bigPrice">22</span><span class="dec">70</span>
+        <span class="per2">(ILS126.10 / fluid ounce)</span>
       </div>
 
-      <div class="links">
-        <a href="#">FREE International Returns</a><br>
-        <a href="#">No Import Charges &amp; ILS 60.43 Shipping to Israel Details</a>
+      <div class="blue-line">
+        <a class="blue-link" href="#">FREE International Returns</a>
+        <span class="drop">▼</span>
       </div>
 
-      <div class="var">
-        <div class="label">Color:</div>
-        <button class="pill active">Love Cake</button>
+      <div class="blue-line">
+        No Import Charges &amp; ILS 60.43 Shipping to Israel
+        <a class="blue-link" href="#">Details</a>
+        <span class="drop">▼</span>
       </div>
 
-      <div class="var">
-        <div class="label">Size:</div>
-        <button class="pill active">0.18 Fl Oz (Pack of 1)</button>
+      <div class="varRow">
+        <div class="label2">Color:</div>
+        <select class="select2">
+          <option>Love Cake</option>
+        </select>
       </div>
 
-      <div class="mini-box">
-        <div><strong>0.18 Fl Oz (Pack of 1)</strong></div>
-        <div class="mini-price">ILS 22.70</div>
-        <div class="mini-per">ILS 126.10 per fluid ounce</div>
-        <a class="mini-link" href="#">See 1 options with no featured offers</a>
+      <div class="sizeTitle">
+        Size: <strong>0.18 Fl Oz (Pack of 1)</strong>
+      </div>
+
+      <div class="sizeBoxes">
+        <div class="sizeBox active">
+          <div class="boxTitle">0.18 Fl Oz (Pack of 1)</div>
+          <div class="boxPrice">ILS22.70</div>
+          <div class="boxPer">(ILS126.10 / fluid ounce)</div>
+        </div>
+
+        <div class="sizeBox">
+          <div class="boxTitle">See 1 options</div>
+          <div class="boxSub">with no featured offers</div>
+        </div>
       </div>
 
       <table class="specs">
@@ -117,7 +138,7 @@
 
     </section>
 
-    <!-- 4) RIGHT BUY BOX -->
+    <!-- 5) RIGHT BUY BOX -->
     <aside class="buybox">
 
       <div class="buy-price">
@@ -171,7 +192,7 @@
     </aside>
 
   </main>
-  <script src="script.js"></script>
 
+  <script src="script.js"></script>
 </body>
 </html>
