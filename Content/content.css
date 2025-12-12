@@ -1,4 +1,4 @@
-/* ====== Base ====== */
+/* ================= RESET ================= */
 *{ box-sizing: border-box; }
 
 body{
@@ -8,27 +8,25 @@ body{
   color:#0f1111;
 }
 
-/* ====== Breadcrumb ====== */
+/* ================= BREADCRUMB ================= */
 .breadcrumb{
   font-size:12px;
   color:#565959;
   padding:12px 18px;
 }
 
-/* ====== 5 sections grid ====== */
-/* thumbs | media | share | details | buybox */
-
+/* ================= 5 SECTIONS GRID ================= */
+/* thumbs | media | share | details-frame | buybox */
 .product-grid{
   display:grid;
-  grid-template-columns: 70px 440px 26px 1fr 320px;  /* 240 instead of 26 */
+  grid-template-columns: 70px 440px 26px 1fr 320px;
   column-gap:18px;
   row-gap:18px;
   padding:0 18px 40px;
   align-items:stretch;
 }
 
-
-/* ====== 1) thumbs ====== */
+/* ================= 1) THUMBS ================= */
 .thumbs{ padding-top:6px; }
 
 .thumbs img{
@@ -47,16 +45,16 @@ body{
   outline-offset:2px;
 }
 
-/* ====== 2) main media (sticky) ====== */
+/* ================= 2) MAIN MEDIA (STICKY) ================= */
 .media{
   position:relative;
-  z-index: 1;            /* keep below share dropdown */
+  z-index:1; /* keep below share dropdown */
 }
 
 .media-sticky{
   position: sticky;
   top: 12px;
-  z-index: 1;
+  z-index:1;
 }
 
 .media-sticky img{
@@ -73,225 +71,28 @@ body{
   color:#007185;
 }
 
-/* ====== 3) share iframe column ====== */
+/* ================= 3) SHARE IFRAME ================= */
 .share-frame{
-  width: 240px;         /* IMPORTANT: must fit the menu */
-  height: 260px;
-  border: 0;
-  display: block;
-
-  position: relative;
-  z-index: 999999;
-  overflow: visible;
-}
-
-/* ====== 4) details ====== */
-.title{
-  margin:0 0 6px;
-  font-size:24px;
-  font-weight:400;
-  line-height:1.2;
-}
-
-.store{
-  display:inline-block;
-  font-size:13px;
-  color:#007185;
-  text-decoration:none;
-  margin-bottom:10px;
-}
-.store:hover{ color:#c7511f; text-decoration:underline; }
-
-.rating-row{
-  font-size:13px;
-  display:flex;
-  gap:8px;
-  align-items:center;
-  margin-bottom:6px;
-}
-
-.stars{ font-weight:700; }
-
-.reviews{
-  color:#007185;
-  text-decoration:none;
-}
-.reviews:hover{ color:#c7511f; text-decoration:underline; }
-
-.bought{
-  font-size:13px;
-  color:#565959;
-  margin-bottom:10px;
-}
-
-.line{
+  width:240px;
+  height:260px;
   border:0;
-  border-top:1px solid #e7e7e7;
-  margin:12px 0;
+  display:block;
+
+  position:relative;
+  z-index:999999;
+  overflow:visible;
 }
 
-/* price like screenshot */
-.price-line2{
-  margin:10px 0;
-  display:flex;
-  align-items:baseline;
-  gap:4px;
+/* ================= 4) DETAILS IFRAME ================= */
+.details-frame{
+  width:100%;
+  height:1200px; /* increase if it cuts */
+  border:0;
+  display:block;
+  overflow:hidden;
 }
 
-.ils{ font-size:13px; color:#565959; }
-.bigPrice{ font-size:28px; font-weight:700; }
-.dec{ font-size:13px; font-weight:700; vertical-align:super; margin-left:1px; }
-.per2{ font-size:12px; color:#565959; margin-left:6px; }
-
-.blue-line{
-  font-size:13px;
-  color:#565959;
-  margin-top:6px;
-  display:flex;
-  align-items:center;
-  gap:6px;
-  flex-wrap:wrap;
-}
-
-.blue-link{
-  color:#007185;
-  text-decoration:none;
-  font-size:13px;
-}
-.blue-link:hover{ color:#c7511f; text-decoration:underline; }
-
-.drop{ color:#565959; font-size:12px; }
-
-.varRow{
-  margin-top:12px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.label2{
-  font-size:13px;
-  color:#565959;
-}
-
-.select2{
-  padding:6px 10px;
-  border:1px solid #d5d9d9;
-  border-radius:8px;
-  background:#f0f2f2;
-  font-size:13px;
-}
-
-.sizeTitle{
-  margin-top:14px;
-  font-size:14px;
-}
-
-.sizeBoxes{
-  display:flex;
-  gap:10px;
-  margin-top:10px;
-}
-
-.sizeBox{
-  border:1px solid #d5d9d9;
-  border-radius:10px;
-  padding:10px;
-  width:150px;
-  background:#fff;
-  font-size:12px;
-}
-
-.sizeBox.active{
-  border:2px solid #007185;
-}
-
-.boxTitle{ font-weight:700; margin-bottom:6px; }
-.boxPrice{ font-weight:700; }
-.boxPer{ color:#565959; margin-top:4px; font-size:11px; }
-.boxSub{ color:#565959; margin-top:6px; }
-
-.specs{
-  margin-top:14px;
-  border-collapse: collapse;
-  font-size:13px;
-}
-
-.specs td{
-  padding:6px 10px 6px 0;
-  vertical-align:top;
-}
-
-.specs td:first-child{
-  color:#565959;
-  width:120px;
-}
-
-.details h3{
-  margin:16px 0 8px;
-  font-size:18px;
-}
-
-.about{
-  margin:0 0 14px 18px;
-  padding:0;
-  font-size:13px;
-  line-height:1.35;
-}
-
-.note{
-  border:1px solid #d5d9d9;
-  border-radius:10px;
-  padding:12px;
-  background:#f7fafa;
-  font-size:13px;
-  margin:12px 0;
-}
-
-.report{
-  display:inline-block;
-  font-size:12px;
-  color:#007185;
-  text-decoration:none;
-  margin-bottom:14px;
-}
-.report:hover{ color:#c7511f; text-decoration:underline; }
-
-.newer{
-  border-top:1px solid #e7e7e7;
-  padding-top:14px;
-}
-
-.newer-title{
-  font-weight:700;
-  margin-bottom:8px;
-}
-
-.newer-item a{
-  color:#007185;
-  text-decoration:none;
-  font-size:13px;
-}
-.newer-item a:hover{ color:#c7511f; text-decoration:underline; }
-
-.newer-price{
-  margin-top:6px;
-  font-size:13px;
-}
-
-.newer-sub{
-  margin-top:4px;
-  font-size:12px;
-  color:#565959;
-}
-
-.sponsored{
-  margin-top:6px;
-  font-size:11px;
-  color:#565959;
-}
-
-/* ====== 5) buy box ====== */
+/* ================= 5) BUY BOX ================= */
 .buybox{
   border:1px solid #d5d9d9;
   border-radius:10px;
@@ -402,7 +203,7 @@ body{
   margin-bottom:6px;
 }
 
-/* ====== Responsive ====== */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 1200px){
   .product-grid{
     grid-template-columns: 70px 380px 26px 1fr 300px;
@@ -413,8 +214,12 @@ body{
   .product-grid{
     grid-template-columns: 70px 1fr;
   }
+
   .media{ grid-column: 2 / -1; }
   .share-frame{ display:none; }
-  .details{ grid-column: 2 / -1; }
+
+  /* IMPORTANT: details is now an iframe */
+  .details-frame{ grid-column: 2 / -1; }
+
   .buybox{ grid-column: 1 / -1; }
 }
