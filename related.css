@@ -1,0 +1,209 @@
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#fff;
+  color:#0f1111;
+}
+
+.wrap{
+  padding: 12px 18px 18px;
+  border-top: 1px solid #e7e7e7;
+}
+
+/* ================== TOP ================== */
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom: 10px;
+}
+
+.left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.title{
+  margin:0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.sponsored{
+  font-size: 13px;
+  color:#565959;
+  margin-top: 8px;
+}
+
+.info{
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  border:1px solid #bbb;
+  color:#565959;
+  font-size:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top: 7px;
+}
+
+.page{
+  font-size: 16px;
+  color:#0f1111;
+  margin-top: 6px;
+}
+
+/* ================== CAROUSEL ================== */
+.carousel{
+  display:grid;
+  grid-template-columns: 44px 1fr 44px; /* left btn | cards | right btn */
+  align-items:center;
+  column-gap: 12px;
+}
+
+.nav{
+  width: 44px;
+  height: 44px;
+  border-radius:8px;
+  border:1px solid #bdbdbd;
+  background:#fff;
+  font-size:28px;
+  line-height:1;
+  color:#565959;
+}
+
+.nav:disabled{
+  cursor:default;
+  opacity: 1;
+}
+
+/* ================== TRACK (GRID) ==================
+   ✅ divides all available space equally between 7 cards */
+.track{
+  display:grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr)); /* 7 equal columns */
+  column-gap: 14px;
+  overflow:hidden;   /* no scroll, no extra space */
+  padding: 8px 0;
+}
+
+/* card fills its grid cell */
+.card{
+  min-width: 0;      /* IMPORTANT: allows text truncation inside grid */
+}
+
+/* image */
+.img{
+  height: 150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.img img{
+  max-width: 150px;
+  max-height: 150px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* title */
+.name{
+  display:block;
+  margin-top: 6px;
+  color:#007185;
+  text-decoration:none;
+  font-size:14px;
+  line-height:1.25;
+
+  height: 54px;      /* keep same height for all cards */
+  overflow:hidden;
+}
+
+.name:hover{
+  color:#c7511f;
+  text-decoration: underline;
+}
+
+/* rating row */
+.rating{
+  margin-top: 6px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+}
+
+.stars{
+  color:#f08804;
+  letter-spacing: 1px;
+}
+
+.count{
+  color:#007185;
+  text-decoration:none;
+}
+.count:hover{ color:#c7511f; text-decoration:underline; }
+
+/* badges */
+.badge{
+  display:inline-block;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color:#fff;
+}
+
+.badge.dark{ background:#232f3e; }
+.badge.orange{ background:#b12704; }
+.badge.red{ background:#cc0c39; }
+
+/* price */
+.price{
+  margin-top: 8px;
+  display:flex;
+  align-items:baseline;
+  gap:2px;
+}
+
+.cur{ font-size:11px; color:#565959; }
+.main{ font-size:20px; font-weight:700; }
+.dec{ font-size:11px; font-weight:700; vertical-align:super; }
+
+.unit{
+  margin-top: 5px;
+  font-size: 12px;
+  color:#565959;
+}
+
+.deal{
+  margin-top: 8px;
+  font-size: 16px;
+  color:#cc0c39;
+}
+
+.dealPrice{
+  color:#0f1111;
+  font-weight:700;
+  margin-left: 6px;
+}
+
+.strike{
+  margin-top: 5px;
+  font-size: 12px;
+  color:#565959;
+  text-decoration: line-through;
+}
+
+.prime{
+  margin-top: 6px;
+  font-size: 13px;
+  color:#007185;
+  font-weight: 700;
+}
