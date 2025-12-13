@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Frequently Bought Together</title>
+  <link rel="stylesheet" href="fbt.css" />
+</head>
+<body>
+
+<section class="wrap">
+
+  <h2 class="title">Frequently bought together</h2>
+
+  <div class="row">
+
+    <!-- LEFT: items -->
+    <div class="items">
+
+      <!-- Item 1 -->
+      <div class="item">
+        <div class="imgBox">
+          <img src="img/p1.png" alt="">
+        </div>
+
+        <div class="name">
+          <strong>This item:</strong> SHEGLAM Color Bloom Liquid Blush Makeup for Cheeks Matte Finish - Hot Topic
+        </div>
+
+        <div class="priceLine">
+          <span class="cur">ILS</span><span class="main">22</span><span class="dec">66</span>
+          <span class="unit">(ILS 125.87 / fluid ounce)</span>
+        </div>
+      </div>
+
+      <div class="plus">+</div>
+
+      <!-- Item 2 -->
+      <div class="item">
+        <div class="imgBox">
+          <img src="img/p2.png" alt="">
+        </div>
+
+        <div class="name link">
+          SHEGLAM Sun Sculpt Cool Toned Liquid Contour Stick Long Lasting Cream Bronzer Makeup - Golden...
+        </div>
+
+        <div class="priceLine">
+          <span class="cur">ILS</span><span class="main">22</span><span class="dec">66</span>
+          <span class="unit">(ILS 125.87 / fluid ounce)</span>
+        </div>
+      </div>
+
+      <div class="plus">+</div>
+
+      <!-- Item 3 -->
+      <div class="item">
+        <div class="imgBox">
+          <img src="img/p3.png" alt="">
+        </div>
+
+        <div class="name link">
+          SHEGLAM Glow Bloom Liquid Waterproof Highlighter Long Lasting Cream Highlighter with...
+        </div>
+
+        <div class="priceLine">
+          <span class="cur">ILS</span><span class="main">18</span><span class="dec">09</span>
+          <span class="unit">(ILS 100.49 / fluid ounce)</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: total + button -->
+    <div class="buy">
+      <div class="total">
+        Total price: <strong>ILS 63.41</strong>
+      </div>
+      <button class="btn">Add all 3 to Cart</button>
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+  // auto resize iframe height
+  function sendHeight(){
+    parent.postMessage({ type: "FBT_HEIGHT", height: document.documentElement.scrollHeight }, "*");
+  }
+  addEventListener("load", sendHeight);
+  addEventListener("resize", sendHeight);
+</script>
+
+</body>
+</html>

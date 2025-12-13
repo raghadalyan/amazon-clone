@@ -1,0 +1,185 @@
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#fff;
+  color:#0f1111;
+}
+
+.buybox{
+  width:100%;
+  border:1px solid #d5d9d9;
+  border-radius:10px;
+  padding:16px;
+  background:#fff;
+}
+
+/* PRICE */
+.price{
+  display:flex;
+  align-items:baseline;
+  gap:2px;
+  margin-bottom:10px;
+}
+
+.cur{
+  font-size:13px;
+  color:#565959;
+}
+
+.main{
+  font-size:28px;
+  font-weight:700;
+}
+
+.dec{
+  font-size:13px;
+  font-weight:700;
+  vertical-align:super;
+}
+
+.unit{
+  font-size:12px;
+  color:#565959;
+  margin-left:6px;
+}
+
+/* SHIPPING */
+.ship{
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.ship a{
+  color:#007185;
+  text-decoration:none;
+}
+
+.ship a:hover{
+  text-decoration:underline;
+}
+
+.chev{
+  font-size:12px;
+  color:#565959;
+}
+
+/* DELIVERY */
+.delivery{
+  font-size:14px;
+  line-height:1.35;
+  margin-bottom:6px;
+}
+
+.time{
+  color:#007600;
+  font-weight:700;
+}
+
+/* LOCATION */
+.loc-ico{
+  width:16px;
+  height:16px;
+  object-fit:contain;
+  display:inline-block;
+  transform: translateY(2px);
+}
+
+.location{
+  margin:8px 0 12px;
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+
+.location a{
+  color:#007185;
+  text-decoration:none;
+}
+
+/* STOCK */
+.stock{
+  color:#007600;
+  font-size:18px;
+  font-weight:500;
+  margin-bottom:12px;
+}
+
+/* QTY */
+.qty select{
+  width:100%;
+  padding:8px;
+  border:1px solid #d5d9d9;
+  border-radius:8px;
+  font-size:14px;
+  background:#f0f2f2;
+}
+
+/* BUTTONS */
+.btn{
+  width:100%;
+  border:0;
+  border-radius:999px;
+  padding:12px 0;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.btn.cart{
+  background:#ffd814;
+}
+
+.btn.buy{
+  background:#ffa41c;
+}
+
+.btn.list{
+  background:#fff;
+  border:1px solid #d5d9d9;
+}
+
+.btn:hover{
+  filter:brightness(0.97);
+}
+
+/* META */
+.meta{
+  margin-top:14px;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.meta div{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.meta span{
+  color:#565959;
+}
+
+.meta a{
+  color:#007185;
+  text-decoration:none;
+}
+
+/* GIFT */
+.gift{
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  font-size:13px;
+  margin:14px 0;
+}
+
+hr{
+  border:0;
+  border-top:1px solid #e7e7e7;
+  margin:14px 0;
+}

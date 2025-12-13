@@ -341,7 +341,12 @@ iframe{
 
 /* NEW: content frame */
 .content-frame{
-  height: 1200px;  /* temporary */
+  height: 1260px;  /* temporary */
 }
 
-
+.fbt-frame{
+  width:100%;
+  border:0;
+  display:block;
+  height: 520px; /* adjust if you add more sections */
+}

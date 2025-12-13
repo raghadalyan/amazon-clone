@@ -16,7 +16,7 @@ body{
 }
 
 /* ================= 5 SECTIONS GRID ================= */
-/* thumbs | media | share | details-frame | buybox */
+/* thumbs | media | share | details-frame | buybox-frame */
 .product-grid{
   display:grid;
   grid-template-columns: 70px 440px 26px 1fr 320px;
@@ -92,115 +92,13 @@ body{
   overflow:hidden;
 }
 
-/* ================= 5) BUY BOX ================= */
-.buybox{
-  border:1px solid #d5d9d9;
-  border-radius:10px;
-  padding:14px;
-  background:#fff;
-}
-
-.buy-price .big{
-  font-size:18px;
-  font-weight:700;
-}
-
-.buy-price .small{
-  font-size:12px;
-  color:#565959;
-}
-
-.ship{ margin:10px 0; }
-
-.ship a{
-  font-size:12px;
-  color:#007185;
-  text-decoration:none;
-}
-.ship a:hover{ color:#c7511f; text-decoration:underline; }
-
-.delivery{
-  font-size:12px;
-  color:#0f1111;
-  line-height:1.35;
-  margin:10px 0;
-}
-
-.delivery a{
-  color:#007185;
-  text-decoration:none;
-}
-.delivery a:hover{ color:#c7511f; text-decoration:underline; }
-
-.stock{
-  color:#007600;
-  font-weight:700;
-  margin:10px 0;
-}
-
-.qty{
-  font-size:13px;
-  margin:10px 0;
-}
-
-.qty select{
-  margin-left:6px;
-  padding:4px 6px;
-  border:1px solid #d5d9d9;
-  border-radius:8px;
-}
-
-.btn{
+/* ================= 5) BUYBOX IFRAME ================= */
+.buybox-frame{
   width:100%;
+  height:760px; /* increase if it cuts */
   border:0;
-  padding:10px 12px;
-  border-radius:999px;
-  cursor:pointer;
-  font-size:14px;
-  margin-top:10px;
-}
-
-.btn.cart{ background:#ffd814; }
-.btn.buy { background:#ffa41c; }
-.btn.list{
-  background:#fff;
-  border:1px solid #d5d9d9;
-}
-
-.btn:hover{ filter: brightness(0.97); }
-
-.meta{
-  margin-top:12px;
-  font-size:12px;
-  line-height:1.6;
-}
-
-.meta div{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-}
-
-.meta span{ color:#565959; }
-
-.gift{
-  display:flex;
-  gap:8px;
-  align-items:center;
-  margin-top:10px;
-  font-size:12px;
-}
-
-.other{
-  margin-top:14px;
-  padding-top:12px;
-  border-top:1px solid #e7e7e7;
-  font-size:12px;
-}
-
-.other-title{
-  font-weight:700;
-  margin-bottom:6px;
+  display:block;
+  overflow:hidden;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -218,8 +116,9 @@ body{
   .media{ grid-column: 2 / -1; }
   .share-frame{ display:none; }
 
-  /* IMPORTANT: details is now an iframe */
+  /* details is an iframe */
   .details-frame{ grid-column: 2 / -1; }
 
-  .buybox{ grid-column: 1 / -1; }
+  /* buybox is an iframe */
+  .buybox-frame{ grid-column: 1 / -1; }
 }

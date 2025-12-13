@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buy Box</title>
+  <link rel="stylesheet" href="buybox.css">
+</head>
+<body>
+
+<aside class="buybox">
+
+  <!-- PRICE -->
+  <div class="price">
+    <span class="cur">ILS</span>
+    <span class="main">22</span><span class="dec">66</span>
+    <span class="unit">(ILS125.87 / fluid ounce)</span>
+  </div>
+
+  <!-- SHIPPING -->
+  <div class="ship">
+    No Import Charges &amp; ILS 60.72 Shipping to Israel
+    <a href="#">Details</a>
+    <span class="chev">▼</span>
+  </div>
+
+  <!-- DELIVERY -->
+  <div class="delivery">
+    Delivery <strong>Tuesday, December 30</strong> to Israel.
+    Order within <span class="time">13 hrs 46 mins</span>
+  </div>
+
+  <div class="delivery">
+    Or fastest delivery <strong>Tuesday, December 23</strong>
+  </div>
+
+ <div class="location">
+  <img class="loc-ico" src="../img/location.png" alt="location">
+  <a href="#">Deliver to Israel</a>
+</div>
+
+
+  <!-- STOCK -->
+  <div class="stock">In Stock</div>
+
+  <!-- QUANTITY -->
+  <div class="qty">
+    <select>
+      <option>Quantity: 1</option>
+      <option>2</option>
+      <option>3</option>
+    </select>
+  </div>
+
+  <!-- BUTTONS -->
+  <button class="btn cart">Add to Cart</button>
+  <button class="btn buy">Buy Now</button>
+
+  <!-- META -->
+  <div class="meta">
+    <div><span>Ships from</span><strong>Amazon</strong></div>
+    <div><span>Sold by</span><a href="#">SHEGLAM</a></div>
+    <div><span>Returns</span><a href="#">FREE refund/replacement<br>until Jan 31, 2026</a></div>
+    <div><span>Payment</span><a href="#">Secure transaction</a></div>
+  </div>
+
+  <!-- GIFT -->
+  <label class="gift">
+    <input type="checkbox">
+    Add a gift receipt for easy returns
+  </label>
+
+  <hr>
+
+  <button class="btn list">Add to List</button>
+
+</aside>
+
+<script>
+  parent.postMessage(
+    { type: "BUYBOX_HEIGHT", height: document.documentElement.scrollHeight },
+    "*"
+  );
+</script>
+
+</body>
+</html>
